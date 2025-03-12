@@ -1,35 +1,28 @@
-**Proyecto: Gestión de Servidores**
+# Proyecto: Gestión de Servidores
 
-Descripción
+## Descripción
 
 Este proyecto es una aplicación web para la gestión de servidores, permitiendo visualizar, agregar, editar y eliminar servidores, además de ver estadísticas sobre su distribución por sistema operativo.
 
 El sistema está compuesto por un backend en Flask y un frontend en Angular.
 
-**Arquitectura del Proyecto**
+## Arquitectura del Proyecto
 
-Backend (API con Flask)
+### Backend (API con Flask)
 
-Framework: Flask
+- **Framework:** Flask
+- **Base de datos:** MySQL (usando SQLAlchemy como ORM)
+- **Rutas principales:**
 
-Base de datos: MySQL (usando SQLAlchemy como ORM)
-
-Rutas principales:
-
-GET /servers/ → Lista todos los servidores
-
-POST /servers/ → Agregar un nuevo servidor
-
-POST /servers/<id> → Obtener detalles de un servidor específico
-
-POST /servers/<id> → Editar información de un servidor
-
-GET /servers/<id> → Eliminar un servidor
-
-POST /servers/<id>/status → Cambiar el estado de un servidor
+  - `GET /servers/` → Lista todos los servidores
+  - `POST /servers/` → Agrega un nuevo servidor
+  - `GET /servers/<id>` → Obtiene detalles de un servidor específico
+  - `POST /servers/<id>` → Edita información de un servidor
+  - `GET /servers/<id>` → Elimina un servidor
+  - `POST /servers/<id>/status` → Cambia el estado de un servidor
 
 
-Frontend (Angular 18 - Standalone)
+### Frontend (Angular 18 - Standalone)
 
 Servicios HTTP con HttpClient para consumir la API
 
@@ -49,7 +42,7 @@ ServerStatsComponent: Estadísticas de servidores por OS
 
 Se mejoró la usabilidad con estilos modernos y responsivos.
 
-Instalación y Ejecución
+## Instalación y Ejecución
 
 Backend (Flask)
 
