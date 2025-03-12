@@ -63,8 +63,7 @@ Agregar autenticación JWT en el backend
 Implementar gráficos interactivos con Angular Material
 
 ## Vista Previa del Proyecto
-
-- [Funcionamiento del Backend](assets/back.gif)
-- [Funcionamiento del Frontend](assets/front.gif)
+![Funcionamiento del Backend](assets/back.gif)
+![Funcionamiento del Frontend](assets/front.gif)
 
  Desarrollado por Daniel Pineda
