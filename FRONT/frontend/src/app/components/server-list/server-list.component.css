@@ -1,0 +1,59 @@
+/* Contenedor de los filtros */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el input de búsqueda */
+  .filter-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  /* Estilos para el select de estado */
+  .filter-container select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos generales de la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: beige;
+  }
+  
+  /* Encabezado de la tabla */
+  thead {
+    background-color: #aed3fa;
+    color: black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Efecto hover en filas */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estado activo/inactivo */
+  td:last-child {
+    font-weight: bold;
+  }
+
+  

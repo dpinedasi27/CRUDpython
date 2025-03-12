@@ -1,0 +1,13 @@
+<div class="stats-container">
+    <h3>Estadísticas de Servidores</h3>
+  
+    <p><strong>Total de Servidores:</strong> {{ totalServers }}</p>
+    
+    <h4>Distribución por OS:</h4>
+    <ul>
+      <li *ngFor="let os of osDistribution">
+        {{ os.name }}: <strong>{{ os.count }}</strong>
+      </li>
+    </ul>
+  </div>
+  

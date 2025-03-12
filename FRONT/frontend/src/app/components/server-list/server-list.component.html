@@ -1,0 +1,60 @@
+<!-- Contenedor de filtros -->
+<div class="filter-container">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Buscar servidor</mat-label>
+        <input matInput [(ngModel)]="searchTerm" (keyup)="applyFilter()" placeholder="Ej. Ubuntu">
+      </mat-form-field>
+      
+  
+    <mat-form-field>
+      <mat-label>Filtrar por estado</mat-label>
+      <mat-select [(ngModel)]="filterState" (selectionChange)="filterByState()">
+        <mat-option value="">Todos</mat-option>
+        <mat-option value="1">Activos</mat-option>
+        <mat-option value="0">Inactivos</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  <!-- Tabla de servidores -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let server"> {{ server.name }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="OS">
+      <th mat-header-cell *matHeaderCellDef> OS </th>
+      <td mat-cell *matCellDef="let server"> {{ server.OS }} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="ram">
+      <th mat-header-cell *matHeaderCellDef> RAM </th>
+      <td mat-cell *matCellDef="let server"> {{ server.ram }} GB</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="disk">
+      <th mat-header-cell *matHeaderCellDef> Disco </th>
+      <td mat-cell *matCellDef="let server"> {{ server.disk }} GB</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="ip_address">
+      <th mat-header-cell *matHeaderCellDef> IP </th>
+      <td mat-cell *matCellDef="let server"> {{ server.ip_address }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let server">
+        <span [ngClass]="{'activo': server.state == 1, 'inactivo': server.state == 0}">
+          {{ server.state == 1 ? '🟢 Activo' : '🔴 Inactivo' }}
+        </span>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+  

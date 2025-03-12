@@ -1,0 +1,25 @@
+.stats-container {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: white;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
